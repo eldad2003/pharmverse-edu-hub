@@ -19,8 +19,16 @@ interface AuthFormProps {
   onLogin: (user: User) => void;
 }
 
+type UserRole = 'admin' | 'student';
+
 const AuthForm: React.FC<AuthFormProps> = ({ onLogin }) => {
-  const [loginForm, setLoginForm] = useState({ username: '', password: '', yearGroup: '', role: 'student' as const });
+  const [loginForm, setLoginForm] = useState<{
+    username: string;
+    password: string;
+    yearGroup: string;
+    role: UserRole;
+  }>({ username: '', password: '', yearGroup: '', role: 'student' });
+  
   const [registerForm, setRegisterForm] = useState({ username: '', password: '', confirmPassword: '', yearGroup: '' });
   const { toast } = useToast();
 
@@ -146,7 +154,7 @@ const AuthForm: React.FC<AuthFormProps> = ({ onLogin }) => {
                 <form onSubmit={handleLogin} className="space-y-4">
                   <div className="space-y-2">
                     <Label>Role</Label>
-                    <Select value={loginForm.role} onValueChange={(value: 'admin' | 'student') => setLoginForm({...loginForm, role: value})}>
+                    <Select value={loginForm.role} onValueChange={(value: UserRole) => setLoginForm({...loginForm, role: value})}>
                       <SelectTrigger className="neomorphic-inset">
                         <SelectValue />
                       </SelectTrigger>
