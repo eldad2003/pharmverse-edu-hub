@@ -8,43 +8,43 @@
 
 @layer base {
   :root {
-    --background: 210 40% 98%;
+    --background: 210 40% 96%;
     --foreground: 222.2 84% 4.9%;
 
-    --card: 0 0% 100%;
+    --card: 0 0% 98%;
     --card-foreground: 222.2 84% 4.9%;
 
-    --popover: 0 0% 100%;
+    --popover: 0 0% 98%;
     --popover-foreground: 222.2 84% 4.9%;
 
     --primary: 199 89% 48%;
     --primary-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
+    --secondary: 210 40% 94%;
     --secondary-foreground: 222.2 47.4% 11.2%;
 
-    --muted: 210 40% 96.1%;
+    --muted: 210 40% 94%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
+    --accent: 210 40% 94%;
     --accent-foreground: 222.2 47.4% 11.2%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
+    --border: 214.3 31.8% 89%;
+    --input: 214.3 31.8% 89%;
     --ring: 199 89% 48%;
 
     --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    --sidebar-background: 0 0% 96%;
     --sidebar-foreground: 240 5.3% 26.1%;
     --sidebar-primary: 240 5.9% 10%;
     --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent: 240 4.8% 93%;
     --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
+    --sidebar-border: 220 13% 89%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -93,22 +93,22 @@
   }
 
   body {
-    @apply bg-gradient-to-br from-pharm-blue-50 via-white to-pharm-blue-100 text-foreground font-sans;
+    @apply bg-gradient-to-br from-pharm-blue-100 via-gray-50 to-pharm-blue-200 text-foreground font-sans;
     min-height: 100vh;
   }
 }
 
 @layer components {
   .glass-card {
-    @apply bg-white/20 backdrop-blur-md border border-white/30 shadow-xl;
+    @apply bg-white/15 backdrop-blur-md border border-white/25 shadow-xl;
   }
   
   .neomorphic {
-    @apply bg-gradient-to-br from-white to-gray-100 shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#ffffff];
+    @apply bg-gradient-to-br from-gray-50 to-gray-100 shadow-[8px_8px_16px_#d1d9e6,-8px_-8px_16px_#f7f7f7];
   }
   
   .neomorphic-inset {
-    @apply bg-gradient-to-br from-gray-100 to-white shadow-[inset_8px_8px_16px_#d1d9e6,inset_-8px_-8px_16px_#ffffff];
+    @apply bg-gradient-to-br from-gray-100 to-gray-50 shadow-[inset_8px_8px_16px_#d1d9e6,inset_-8px_-8px_16px_#f7f7f7];
   }
   
   .pharm-gradient {
